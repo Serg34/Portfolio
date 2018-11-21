@@ -73,6 +73,9 @@
     <Compile Include="HelpExcelToWord.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="HelpFindDuplicates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Problems\!HelpProblem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,6 +103,9 @@
     <EmbeddedResource Include="HelpExcelToWord.resx">
       <DependentUpon>HelpExcelToWord.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpFindDuplicates.resx">
+      <DependentUpon>HelpFindDuplicates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Problems\!HelpProblem.resx">
       <DependentUpon>!HelpProblem.cs</DependentUpon>

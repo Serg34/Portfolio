@@ -112,6 +112,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DocumentInfo.cs" />
+    <Compile Include="Views\ViewFindDuplicates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewFindDuplicates.Designer.cs">
+      <DependentUpon>ViewFindDuplicates.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\ViewExcelToWord.resx">
       <DependentUpon>ViewExcelToWord.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +131,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewFindDuplicates.resx">
+      <DependentUpon>ViewFindDuplicates.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -66,10 +66,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ModelExcelToWord.cs" />
+    <Compile Include="Models\ModelFindDuplicates.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ExcelHelper.cs" />
     <Compile Include="Services\Serializer.cs" />
     <Compile Include="UndoRedo\ExcelToWord\RepeatInWordCountCmd.cs" />
+    <Compile Include="UndoRedo\FindDuplicates\ExcelColumnDeviationValueCmd.cs" />
+    <Compile Include="UndoRedo\FindDuplicates\ExcelColumnIsKeyCmd.cs" />
+    <Compile Include="UndoRedo\FindDuplicates\ExcelColumnIsMarkedCellCmd.cs" />
+    <Compile Include="UndoRedo\FindDuplicates\LoadDemoFileCmd.cs" />
+    <Compile Include="UndoRedo\FindDuplicates\LoadExcelFileCmd.cs" />
+    <Compile Include="UndoRedo\FindDuplicates\LoadExcelSheetCmd.cs" />
     <Compile Include="UndoRedo\_UndoRedoManager.cs" />
     <Compile Include="UndoRedo\_ICommand.cs" />
     <Compile Include="UndoRedo\ExcelToWord\LoadDemoFileCmd.cs" />
