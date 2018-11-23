@@ -77,10 +77,10 @@ namespace FSImark.BL
 
                 Data.IsExcelFileLoaded = true;
             }
-            catch (Exception ex)
+            catch
             {
                 CloseExcelFile();
-                throw ex;
+                throw;
             }
         }
         public void CloseExcelFile()
@@ -100,10 +100,10 @@ namespace FSImark.BL
                 Data.ExcelCurrentSheetName = sheetName;
                 Data.IsExcelSheetLoaded = true;
             }
-            catch (Exception ex)
+            catch
             {
                 Data.IsExcelSheetLoaded = false;
-                throw ex;
+                throw;
             }
         }
         public void ClearExcelSheets()
@@ -232,7 +232,7 @@ namespace FSImark.BL
                 case 11: return "ноября";
                 case 12: return "декабря";
 
-                default: throw new ArgumentException(nameof(month));
+                default: throw new ArgumentException("Некорретное значение",nameof(month));
             }
         }
         private string Remove(string str, params string[] args)

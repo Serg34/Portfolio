@@ -1,5 +1,4 @@
-﻿using FSImark.BL;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FSImark.BL.Tests
 {
@@ -9,26 +8,30 @@ namespace FSImark.BL.Tests
         [TestMethod()]
         public void CloseExcelFileTest()
         {
-            var model = new ModelFindDuplicates();
-            model.Data.IsExcelFileLoaded = true;
-            model.Data.ExcelFilePath = "test";
+            using (var model = new ModelFindDuplicates())
+            {
+                model.Data.IsExcelFileLoaded = true;
+                model.Data.ExcelFilePath = "test";
 
-            FillSheets(model);
+                FillSheets(model);
 
-            model.CloseExcelFile();
-            Assert.IsFalse(model.Data.IsExcelFileLoaded);
-            Assert.IsTrue(string.IsNullOrEmpty(model.Data.ExcelFilePath));
+                model.CloseExcelFile();
+                Assert.IsFalse(model.Data.IsExcelFileLoaded);
+                Assert.IsTrue(string.IsNullOrEmpty(model.Data.ExcelFilePath));
 
-            CheckClearExcelSheets(model);
+                CheckClearExcelSheets(model);
+            }
         }
         [TestMethod()]
         public void ClearExcelSheetsTest()
         {
-            var model = new ModelFindDuplicates();
-            FillSheets(model);
+            using (var model = new ModelFindDuplicates())
+            {
+                FillSheets(model);
 
-            model.ClearExcelSheets();
-            CheckClearExcelSheets(model);
+                model.ClearExcelSheets();
+                CheckClearExcelSheets(model);
+            }
         }
 
         private void FillSheets(ModelFindDuplicates model)
@@ -43,6 +46,5 @@ namespace FSImark.BL.Tests
             Assert.IsTrue(model.Data.ExcelSheetNames.Count == 0);
             Assert.IsTrue(string.IsNullOrEmpty(model.Data.ExcelCurrentSheetName));
         }
-
     }
 }

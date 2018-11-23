@@ -7,7 +7,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace FSImark.BL
 {
-    public class ModelFindDuplicates : IDisposable
+    public sealed class ModelFindDuplicates : IDisposable
     {
         public ModelFindDuplicates()
         {
@@ -91,10 +91,10 @@ namespace FSImark.BL
 
                 Data.IsExcelFileLoaded = true;
             }
-            catch (Exception ex)
+            catch
             {
                 CloseExcelFile();
-                throw ex;
+                throw;
             }
         }
         public void CloseExcelFile()
@@ -120,10 +120,10 @@ namespace FSImark.BL
 
                 Data.IsExcelSheetLoaded = true;
             }
-            catch (Exception ex)
+            catch
             {
                 Data.IsExcelSheetLoaded = false;
-                throw ex;
+                throw;
             }
         }
         public void ClearExcelSheets()

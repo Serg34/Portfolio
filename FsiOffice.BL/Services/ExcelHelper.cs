@@ -9,7 +9,7 @@ using System;
 
 namespace FSImark.BL
 {
-	public class ExcelHelper
+	public static class ExcelHelper
 	{
 		public static List<string> GetSheets(string excelFilePath)
 		{

@@ -8,27 +8,31 @@ namespace FSImark.BL.Tests
         [TestMethod()]
         public void CloseExcelFileTest()
         {
-            var model = new ModelExcelToWord();
-            model.Data.IsExcelFileLoaded = true;
-            model.Data.ExcelFilePath = "test";
+            using (var model = new ModelExcelToWord())
+            {
+                model.Data.IsExcelFileLoaded = true;
+                model.Data.ExcelFilePath = "test";
 
-            FillSheets(model);
+                FillSheets(model);
 
-            model.CloseExcelFile();
-            Assert.IsFalse(model.Data.IsExcelFileLoaded);
-            Assert.IsTrue(string.IsNullOrEmpty(model.Data.ExcelFilePath));
+                model.CloseExcelFile();
+                Assert.IsFalse(model.Data.IsExcelFileLoaded);
+                Assert.IsTrue(string.IsNullOrEmpty(model.Data.ExcelFilePath));
 
-            CheckClearExcelSheets(model);
+                CheckClearExcelSheets(model);
+            }
         }
 
         [TestMethod()]
         public void ClearExcelSheetsTest()
         {
-            var model = new ModelExcelToWord();
-            FillSheets(model);
+            using (var model = new ModelExcelToWord())
+            {
+                FillSheets(model);
 
-            model.ClearExcelSheets();
-            CheckClearExcelSheets(model);
+                model.ClearExcelSheets();
+                CheckClearExcelSheets(model);
+            }
         }
 
         private void FillSheets(ModelExcelToWord model)
