@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FsiOffice.Data", "FsiOffice
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FsiOffice.Help", "FsiOffice.Help\FsiOffice.Help.csproj", "{CFB2473D-86B9-46B1-ADA0-D91A656BAF06}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FsiOffice.Setup", "FsiOffice.Setup\FsiOffice.Setup.vdproj", "{1BE93B64-AE25-4348-892B-871E1D2D1234}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{CFB2473D-86B9-46B1-ADA0-D91A656BAF06}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CFB2473D-86B9-46B1-ADA0-D91A656BAF06}.Release|x64.ActiveCfg = Release|x64
 		{CFB2473D-86B9-46B1-ADA0-D91A656BAF06}.Release|x64.Build.0 = Release|x64
+		{1BE93B64-AE25-4348-892B-871E1D2D1234}.Debug|Any CPU.ActiveCfg = Debug
+		{1BE93B64-AE25-4348-892B-871E1D2D1234}.Debug|x64.ActiveCfg = Debug
+		{1BE93B64-AE25-4348-892B-871E1D2D1234}.Release|Any CPU.ActiveCfg = Release
+		{1BE93B64-AE25-4348-892B-871E1D2D1234}.Release|x64.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
