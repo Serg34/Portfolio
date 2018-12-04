@@ -7,7 +7,7 @@
     <ProjectGuid>{CFB2473D-86B9-46B1-ADA0-D91A656BAF06}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>FSImark</RootNamespace>
-    <AssemblyName>FsiOfficeHelp</AssemblyName>
+    <AssemblyName>FsiOffice.Help</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -76,6 +76,9 @@
     <Compile Include="HelpFindDuplicates.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="HelpSumDuplicates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Problems\!HelpProblem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HelpFindDuplicates.resx">
       <DependentUpon>HelpFindDuplicates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpSumDuplicates.resx">
+      <DependentUpon>HelpSumDuplicates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Problems\!HelpProblem.resx">
       <DependentUpon>!HelpProblem.cs</DependentUpon>

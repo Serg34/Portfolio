@@ -118,6 +118,12 @@
     <Compile Include="Views\ViewFindDuplicates.Designer.cs">
       <DependentUpon>ViewFindDuplicates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ViewSumDuplicates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewSumDuplicates.Designer.cs">
+      <DependentUpon>ViewSumDuplicates.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\ViewExcelToWord.resx">
       <DependentUpon>ViewExcelToWord.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ViewFindDuplicates.resx">
       <DependentUpon>ViewFindDuplicates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewSumDuplicates.resx">
+      <DependentUpon>ViewSumDuplicates.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

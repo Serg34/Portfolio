@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Models\ModelExcelToWordTests.cs" />
     <Compile Include="Models\ModelFindDuplicatesTests.cs" />
+    <Compile Include="Models\ModelSumDuplicatesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BinarySerializerTests.cs" />
     <Compile Include="Services\XMLSerializerTests.cs" />

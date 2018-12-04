@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="DataExcelToWord.cs" />
     <Compile Include="DataFindDuplicates.cs" />
+    <Compile Include="DataSumDuplicates.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
