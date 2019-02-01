@@ -44,7 +44,7 @@ namespace FSImark.BL
         public DataTable ExcelDataTable { get; private set; }
 
         /// <summary>
-        /// Value of the progress of the main action for taskbar icon
+        /// The progress value of the main action for the taskbar icon
         /// </summary>
         public double ProgressValue { get; private set; }
         /// <summary>

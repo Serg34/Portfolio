@@ -33,7 +33,7 @@ namespace FSImark.BL
         public DataTable ExcelDataTable { get; private set; }
 
         /// <summary>
-        ///  Value of the progress of the main action for taskbar icon
+        /// The progress value of the main action for the taskbar icon
         /// </summary>
         public double ProgressValue { get; private set; }
         /// <summary>
@@ -184,10 +184,9 @@ namespace FSImark.BL
         private void SetDataToWord(DataRow row, dynamic wordDoc, DataColumn col, int matchIndex)
         {
             if (col.ColumnName.Contains("«") && col.ColumnName.Contains("»")
-                                                && DateTime.TryParse(row[col].ToString(), out var date))
+                && DateTime.TryParse(row[col].ToString(), out var date))
             {
-                var name = col.ColumnName.Replace("«", "");
-                name = name.Replace("»", "");
+                var name = col.ColumnName.Replace("«", "").Replace("»", "");
                 if (matchIndex > 0) name += matchIndex.ToString();
 
                 var day = date.Day.ToString("D2");

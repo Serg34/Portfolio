@@ -7,7 +7,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace FSImark.BL
 {
-    public class ModelSumDuplicates : IDisposable
+    public sealed class ModelSumDuplicates : IDisposable
     {
         public ModelSumDuplicates()
         {
@@ -43,7 +43,7 @@ namespace FSImark.BL
         public DataTable ExcelDataTable { get; private set; }
 
         /// <summary>
-        ///  Value of the progress of the main action for taskbar icon
+        ///  The progress value of the main action for the taskbar icon
         /// </summary>
         public double ProgressValue { get; private set; }
         /// <summary>
@@ -158,6 +158,7 @@ namespace FSImark.BL
                 for (int row1Num = 0; row1Num < ExcelDataTable.Rows.Count; row1Num++)
                 {
                     if (isCompleted[row1Num]) continue;
+
                     double sum = double.Parse(ExcelDataTable.Rows[row1Num][Data.OutputColName].ToString());
                     bool row1IsDuplicate = false;
 
@@ -166,7 +167,7 @@ namespace FSImark.BL
                         if (isCompleted[row2Num] || !IsMatche(row1Num, row2Num)) continue;
                         if (!isCompleted[row1Num]) ProgressValue++;
                         if (!isCompleted[row2Num]) ProgressValue++;
-                        row1IsDuplicate = true; isCompleted[row1Num] = isCompleted[row2Num] = true;
+                        row1IsDuplicate = isCompleted[row1Num] = isCompleted[row2Num] = true;
                         sum += double.Parse(ExcelDataTable.Rows[row2Num][Data.OutputColName].ToString());
                     }
 
