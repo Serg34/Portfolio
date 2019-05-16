@@ -189,8 +189,9 @@ namespace FSImark.BL
                 var name = col.ColumnName.Replace("«", "").Replace("»", "");
                 if (matchIndex > 0) name += matchIndex.ToString();
 
+				var ru = CultureInfo.GetCultureInfo("ru-RU");
                 var day = date.Day.ToString("D2");
-                var month = MonthToString(date.Month);
+				var month = ru.DateTimeFormat.MonthGenitiveNames[date.Month];
                 var year = date.Year.ToString();
                 SetTextToWordBookmark(wordDoc, name, $"«{day}» {month} {year}г.");
             }
@@ -214,26 +215,6 @@ namespace FSImark.BL
             catch { }
         }
 
-        private string MonthToString(int month)
-        {
-            switch (month)
-            {
-                case 1: return "января";
-                case 2: return "февраля";
-                case 3: return "марта";
-                case 4: return "апреля";
-                case 5: return "мая";
-                case 6: return "июня";
-                case 7: return "июля";
-                case 8: return "августа";
-                case 9: return "сентября";
-                case 10: return "октября";
-                case 11: return "ноября";
-                case 12: return "декабря";
-
-                default: throw new ArgumentException("Некорретное значение",nameof(month));
-            }
-        }
         private string Remove(string str, params string[] args)
         {
             foreach (var a in args) str = str.Replace(a, "");
