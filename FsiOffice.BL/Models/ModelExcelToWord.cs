@@ -191,7 +191,7 @@ namespace FSImark.BL
 
 				var ru = CultureInfo.GetCultureInfo("ru-RU");
                 var day = date.Day.ToString("D2");
-				var month = ru.DateTimeFormat.MonthGenitiveNames[date.Month];
+				var month = ru.DateTimeFormat.MonthGenitiveNames[date.Month - 1];
                 var year = date.Year.ToString();
                 SetTextToWordBookmark(wordDoc, name, $"«{day}» {month} {year}г.");
             }
